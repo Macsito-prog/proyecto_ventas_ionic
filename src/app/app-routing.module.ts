@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'locales/:nombre',
+    loadChildren: () => import('./locales/locales.module').then( m => m.LocalesPageModule)
+  },
+  {
+    path: 'la-florida',
+    loadChildren: () => import('./la-florida/la-florida.module').then( m => m.LaFloridaPageModule)
+  },
+  {
+    path: 'puente-alto',
+    loadChildren: () => import('./puente-alto/puente-alto.module').then( m => m.PuenteAltoPageModule)
+  },
+  {
+    path: 'macul',
+    loadChildren: () => import('./macul/macul.module').then( m => m.MaculPageModule)
+  },
 ];
 
 @NgModule({
